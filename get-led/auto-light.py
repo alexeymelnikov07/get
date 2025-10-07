@@ -6,9 +6,9 @@ GPIO.setup(led,GPIO.OUT)
 photo=6
 GPIO.setup(photo,GPIO.IN)
 while True:
+	if (GPIO.input(photo)==0):
+		GPIO.output(led,1)
 	if (GPIO.input(photo)==1):
-		GPIO.output(led,photo)
-	else:
 		GPIO.output(led,0)
 #while True:
 	#photo=not photo

@@ -18,12 +18,6 @@ while(True):
 		GPIO.output(leds, 1)
 		time.sleep(light_time)
 		GPIO.output(leds,0)
-
-time.sleep(1)
-
-while(True):
-	if (GPIO.input(stop)==1):
-		break
 	for leds in reversed(led):
 		GPIO.output(leds, 1)
 		time.sleep(light_time)
